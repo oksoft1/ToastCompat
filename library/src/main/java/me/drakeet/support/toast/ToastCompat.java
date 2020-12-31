@@ -166,7 +166,11 @@ public final class ToastCompat extends Toast {
   public @NonNull Toast getBaseToast() {
     return toast;
   }
-
+  
+  @Override 
+  public void cancel() { 
+    toast.cancel(); 
+  }
 
   private static void setContextCompat(@NonNull View view, @NonNull Context context) {
     if (Build.VERSION.SDK_INT == 25) {
